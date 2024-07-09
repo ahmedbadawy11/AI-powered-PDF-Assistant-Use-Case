@@ -49,8 +49,10 @@ def Text_process(all_text,file_name):
    
     MOdels_dir = os.path.join(base_dir, "assets", "models")
     model_path= os.path.join(MOdels_dir,"paraphrase_multilingual_MiniLM_model")
+    model_name = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     encode_kwargs = {'normalize_embeddings': True}
-    llm_embedding = SentenceTransformerEmbeddings(model_name=model_path,encode_kwargs=encode_kwargs)
+    llm_embedding = SentenceTransformerEmbeddings(model_name=model_name,encode_kwargs=encode_kwargs)
+
     
 
     save_to_dir = os.path.join(base_dir, "assets", "files", file_name,"wiki_chroma_db")

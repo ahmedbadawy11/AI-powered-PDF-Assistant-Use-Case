@@ -8,9 +8,8 @@ from fpdf import FPDF
 
 
 env_values = dotenv_values(".env")
-cohere_api_key = env_values['COHERE_API_KEY']
 Gimni_API_KEY = env_values['Gimni_API_KEY']
-Cohere_llm=Cohere(cohere_api_key=cohere_api_key,temperature=0.5)
+
 llm = GoogleGenerativeAI(model="gemini-pro", google_api_key=Gimni_API_KEY,temperature=0.5)
 
 # Initialize variables in session state
